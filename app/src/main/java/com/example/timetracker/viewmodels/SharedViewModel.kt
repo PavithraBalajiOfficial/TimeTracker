@@ -48,7 +48,6 @@ class SharedViewModel(val app: Application) : AndroidViewModel(app) {
             liveTracker.activityDetails = trackerActivityDetail
         }
         trackerRepository.insertActivity(liveTracker)
-        trackerListData.value?.plus(liveTracker)
     }
 
     fun deleteActivity() = viewModelScope.launch {

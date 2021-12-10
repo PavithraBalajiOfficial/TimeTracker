@@ -63,7 +63,7 @@ class TrackerRepository(val app: Application) {
     suspend fun loadActivityForDate(activityDate: String) {
         CoroutineScope(Dispatchers.IO).launch {
             val data = trackerDao.getDetailsForDate(activityDate.trim())
-            trackerListData.postValue(data)
+            trackerListData?.postValue(data)
         }
     }
 

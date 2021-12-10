@@ -22,13 +22,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_edit"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:contentDescription="Edit Activity" />
 
     <TextView
         android:id="@+id/trackingTime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:text="10:00 AM"
         android:textSize="@dimen/list_text_size_small"
         app:layout_constraintBottom_toBottomOf="parent"
