@@ -9,7 +9,7 @@
         android:id="@+id/pickDateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Date"
+        android:text="@string/change_date"
         app:layout_constraintBottom_toTopOf="@id/recycler_view"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"

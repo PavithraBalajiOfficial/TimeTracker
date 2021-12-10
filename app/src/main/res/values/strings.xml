@@ -7,4 +7,10 @@
     <string name="action_delete_all">Delete All</string>
     <string name="EDIT_ACTIVITY">Edit Activity</string>
     <string name="NEW_ACTIVITY">New Activity</string>
+    <string name="time_format_string">10:00 AM</string>
+    <string name="activity_detail">"Enter Activity Details "</string>
+    <string name="change_date">Change Date</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="tracking_date">Tracking Date</string>
+    <string name="tracking_time">Tracking Time</string>
 </resources>

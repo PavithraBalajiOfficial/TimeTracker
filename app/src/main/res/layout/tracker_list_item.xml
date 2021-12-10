@@ -23,14 +23,14 @@
         app:srcCompat="@drawable/ic_edit"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="16dp"
-        android:contentDescription="Edit Activity" />
+        android:contentDescription="@string/EDIT_ACTIVITY" />
 
     <TextView
         android:id="@+id/trackingTime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="10:00 AM"
+        android:text="@string/time_format_string"
         android:textSize="@dimen/list_text_size_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/timeDetails"
@@ -44,7 +44,7 @@
         android:layout_margin="8dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:text="TextView"
+        android:text="@string/activity_detail"
         android:textColor="@color/list_text_color"
         android:textSize="@dimen/list_text_size"
         app:layout_constraintBottom_toBottomOf="parent"

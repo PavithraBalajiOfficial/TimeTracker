@@ -68,7 +68,7 @@ class TrackerRepository(val app: Application) {
     }
 
     @WorkerThread
-    suspend fun loadActivityForToday() {
+    fun loadActivityForToday() {
         loadActivityForDate(
             SimpleDateFormat(
                 "MM/dd/yyyy",
