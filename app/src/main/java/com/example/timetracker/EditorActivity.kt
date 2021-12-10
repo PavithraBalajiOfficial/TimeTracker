@@ -50,7 +50,7 @@ class EditorActivity : AppCompatActivity() {
 
     private fun trackingTimeOnClick() {
         val timeSetLstener =
-            TimePickerDialog.OnTimeSetListener { view, hour, minute ->
+            TimePickerDialog.OnTimeSetListener { _, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
 
@@ -72,7 +72,7 @@ class EditorActivity : AppCompatActivity() {
 
     private fun trackingDateOnClick() {
         val dateSetListener =
-            DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
                 cal.set(Calendar.YEAR, year)
                 cal.set(Calendar.MONTH, monthOfYear)
                 cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)

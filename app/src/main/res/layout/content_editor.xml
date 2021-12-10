@@ -32,7 +32,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/trackingTime"
                 app:layout_constraintEnd_toEndOf="@+id/trackingTime"
                 app:layout_constraintStart_toStartOf="@+id/trackingTime"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:autofillHints="" />
 
 
             <EditText
@@ -47,7 +48,8 @@
                 app:layout_constraintEnd_toEndOf="@+id/timeDetails"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/timeDetails"
-                app:layout_constraintTop_toBottomOf="@+id/trackingDate" />
+                app:layout_constraintTop_toBottomOf="@+id/trackingDate"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/timeDetails"
@@ -57,7 +59,9 @@
                 app:layout_constraintBottom_toTopOf="@+id/button_first"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/trackingTime" />
+                app:layout_constraintTop_toBottomOf="@+id/trackingTime"
+                android:inputType="text"
+                android:autofillHints="" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
