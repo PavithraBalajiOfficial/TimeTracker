@@ -16,8 +16,8 @@ class MainRecyclerAdapter(
 
     inner class ViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
-        val trackerDetail = itemView.findViewById<TextView>(R.id.timeDetails)
-        val trackingTime = itemView.findViewById<TextView>(R.id.trackingTime)
+        val trackerDetail: TextView = itemView.findViewById<TextView>(R.id.timeDetails)
+        val trackingTime: TextView = itemView.findViewById<TextView>(R.id.trackingTime)
     }
 
     interface EditItemListener {

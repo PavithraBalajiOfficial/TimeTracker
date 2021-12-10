@@ -34,12 +34,12 @@ class TrackerRepository(val app: Application) {
     }
 
     @WorkerThread
-    suspend fun insertActivity(tracker: Tracker) {
+    fun insertActivity(tracker: Tracker) {
         trackerDao.insertActivity(tracker)
     }
 
     @WorkerThread
-    suspend fun deleteActivity(tracker: Tracker) {
+    fun deleteActivity(tracker: Tracker) {
         CoroutineScope(Dispatchers.IO).launch {
             trackerDao.deleteActivity(tracker)
         }
@@ -60,7 +60,7 @@ class TrackerRepository(val app: Application) {
     }
 
     @WorkerThread
-    suspend fun loadActivityForDate(activityDate: String) {
+    fun loadActivityForDate(activityDate: String) {
         CoroutineScope(Dispatchers.IO).launch {
             val data = trackerDao.getDetailsForDate(activityDate.trim())
             trackerListData?.postValue(data)

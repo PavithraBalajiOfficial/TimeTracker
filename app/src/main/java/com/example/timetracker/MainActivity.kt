@@ -61,11 +61,11 @@ class MainActivity : AppCompatActivity(), MainRecyclerAdapter.EditItemListener {
 
     private fun dateChangeButtonActions() {
         val pickDateButton = findViewById<Button>(R.id.pickDateButton)
-        var cal = Calendar.getInstance()
+        val cal = Calendar.getInstance()
         val sdf = SimpleDateFormat("MM/dd/yyyy", Locale.US)
 
         // Set the date to Today's Date
-        var dateOnLoad = sdf.format(cal.time)
+        val dateOnLoad = sdf.format(cal.time)
         pickDateButton.text = dateOnLoad
 
         // Upon choosing Date, the activities for the date are loaded
