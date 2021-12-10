@@ -10,7 +10,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainRecyclerAdapter(
     var trackerList: List<Tracker>,
-    val itemListener: EditItemListener
+    private val itemListener: EditItemListener
 ) :
     RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>() {
 

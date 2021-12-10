@@ -19,12 +19,11 @@ class EditorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditorBinding
     private lateinit var viewModel: SharedViewModel
     private var newNote: Boolean = false
-    private var editing: Boolean = false
     private lateinit var activityDetailText: TextView
     private lateinit var trackingDateText: TextView
     private lateinit var trackingTimeText: TextView
 
-    var cal = Calendar.getInstance()
+    private var cal = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +32,12 @@ class EditorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.ic_check)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_check)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        trackingDateText = findViewById<TextView>(R.id.trackingDate)
-        trackingTimeText = findViewById<TextView>(R.id.trackingTime)
-        activityDetailText = findViewById<TextView>(R.id.timeDetails)
+        trackingDateText = findViewById(R.id.trackingDate)
+        trackingTimeText = findViewById(R.id.trackingTime)
+        activityDetailText = findViewById(R.id.timeDetails)
 
         trackingDateOnClick()
         trackingTimeOnClick()
@@ -127,7 +126,7 @@ class EditorActivity : AppCompatActivity() {
         if (item.itemId == android.R.id.home) {
             saveAndReturn()
             return true
-        } else if (item.getItemId() == R.id.action_delete) {
+        } else if (item.itemId == R.id.action_delete) {
             viewModel.deleteActivity()
             finish()
         }
